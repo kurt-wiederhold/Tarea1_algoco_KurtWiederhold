@@ -1,0 +1,24 @@
+% =============================================================================
+% INF-221 Algoritmos y Complejidad -- Tarea 1 -- Semestre 2026-2
+% Autor: Kurt Wiederhold   Rol: 202473528-4
+%
+% ARCHIVO GENERADO AUTOMATICAMENTE por code/sorting/scripts/plot_generator.py
+% a partir de data/measurements/sorting_measurements.csv. No editar a mano:
+% se regenera con `make plots`.
+% =============================================================================
+\begin{table}[H]
+\centering
+\small
+\caption{Pico de memoria dinámica de la llamada (máximo sobre órdenes, dominios y muestras), incluida la copia de retorno de $4n$ bytes de la firma provista: un valor de exactamente $4n$ significa sin memoria auxiliar propia.}
+\label{tab:sorting-memory}
+\begin{tabular}{lrrrr}
+\hline\hline
+Algoritmo & $n=10^{1}$ & $n=10^{3}$ & $n=10^{5}$ & $n=10^{7}$ \\
+\hline
+std::sort & 40~B & 3,9~KiB & 390,6~KiB & 38,1~MiB \\
+Merge sort & 80~B & 7,8~KiB & 781,2~KiB & 76,3~MiB \\
+Quick sort & 40~B & 3,9~KiB & 390,6~KiB & 38,1~MiB \\
+Patience sort & 416~B & 19,6~KiB & 2,0~MiB & 156,5~MiB \\
+\hline\hline
+\end{tabular}
+\end{table}

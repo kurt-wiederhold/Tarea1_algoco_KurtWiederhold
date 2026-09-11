@@ -1,0 +1,24 @@
+% =============================================================================
+% INF-221 Algoritmos y Complejidad -- Tarea 1 -- Semestre 2026-2
+% Autor: Kurt Wiederhold   Rol: 202473528-4
+%
+% ARCHIVO GENERADO AUTOMATICAMENTE por code/sorting/scripts/plot_generator.py
+% a partir de data/measurements/sorting_measurements.csv. No editar a mano:
+% se regenera con `make plots`.
+% =============================================================================
+\begin{table}[H]
+\centering
+\small
+\caption{Exponente empírico $p$ de $t = c\,n^{p}$ (mínimos cuadrados en log-log, dominio $D_7$). Un $\Theta(n\log n)$ debe dar $p\approx1{,}14$, la pendiente de $n\log_2 n$ en el rango medido. Entre paréntesis, $R^2$.}
+\label{tab:sorting-exponents}
+\begin{tabular}{lrrr}
+\hline\hline
+Algoritmo & aleatorio & ascendente & descendente \\
+\hline
+std::sort & 1{,}220 (0{,}997) & 1{,}123 (0{,}998) & 1{,}064 (0{,}989) \\
+Merge sort & 1{,}180 (0{,}998) & 1{,}088 (0{,}998) & 1{,}082 (0{,}998) \\
+Quick sort & 1{,}193 (0{,}997) & 1{,}079 (0{,}999) & 1{,}089 (0{,}999) \\
+Patience sort & 1{,}202 (0{,}995) & 1{,}128 (0{,}999) & 0{,}960 (0{,}995) \\
+\hline\hline
+\end{tabular}
+\end{table}

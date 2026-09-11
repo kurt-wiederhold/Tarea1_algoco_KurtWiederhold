@@ -1,0 +1,25 @@
+% =============================================================================
+% INF-221 Algoritmos y Complejidad -- Tarea 1 -- Semestre 2026-2
+% Autor: Kurt Wiederhold   Rol: 202473528-4
+%
+% ARCHIVO GENERADO AUTOMATICAMENTE por
+% code/matrix_multiplication/scripts/plot_generator.py a partir de
+% data/measurements/matrix_multiplication_measurements.csv. No editar a mano:
+% se regenera con `make plots`.
+% =============================================================================
+\begin{table}[H]
+\centering
+\small
+\caption{Pico de memoria dinámica auxiliar. Para el método clásico corresponde esencialmente a la matriz resultado ($8n^{2}$ bytes); Strassen añade los bloques temporales de la recursión.}
+\label{tab:matrix-memory}
+\begin{tabular}{lrrrr}
+\hline\hline
+Algoritmo & $n=2^{4}$ & $n=2^{6}$ & $n=2^{8}$ & $n=2^{10}$ \\
+\hline
+Clásico (naive) & 2,0~KiB & 32,0~KiB & 512,0~KiB & 8,0~MiB \\
+Strassen & 2,0~KiB & 32,0~KiB & 1,9~MiB & 31,9~MiB \\
+\hline
+Sobrecosto de Strassen & 1{,}00$\times$ & 1{,}00$\times$ & 3{,}81$\times$ & 3{,}99$\times$ \\
+\hline\hline
+\end{tabular}
+\end{table}

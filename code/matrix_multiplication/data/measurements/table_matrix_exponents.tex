@@ -1,0 +1,23 @@
+% =============================================================================
+% INF-221 Algoritmos y Complejidad -- Tarea 1 -- Semestre 2026-2
+% Autor: Kurt Wiederhold   Rol: 202473528-4
+%
+% ARCHIVO GENERADO AUTOMATICAMENTE por
+% code/matrix_multiplication/scripts/plot_generator.py a partir de
+% data/measurements/matrix_multiplication_measurements.csv. No editar a mano:
+% se regenera con `make plots`.
+% =============================================================================
+\begin{table}[H]
+\centering
+\small
+\caption{Exponente empírico $p$ del ajuste $t = c\,n^{p}$ por mínimos cuadrados sobre los logaritmos (dominio $D_{10}$). Los valores de referencia son $3$ para el método clásico y $\log_2 7 = 2{,}807$ para Strassen. Entre paréntesis, el coeficiente de determinación $R^2$. Para Strassen se usan sólo los tamaños en que la recursión está activa ($n$ mayor que el umbral de corte); con umbral 64 son dos puntos, así que $p$ es la pendiente entre ellos y no hay $R^2$.}
+\label{tab:matrix-exponents}
+\begin{tabular}{lrrr}
+\hline\hline
+Algoritmo & matriz densa & matriz dispersa & matriz diagonal \\
+\hline
+Clásico (naive) & 3{,}525 (0{,}999) & 3{,}527 (0{,}998) & 3{,}523 (0{,}999) \\
+Strassen & 3{,}066 (2 puntos) & 3{,}038 (2 puntos) & 3{,}064 (2 puntos) \\
+\hline\hline
+\end{tabular}
+\end{table}

@@ -1,0 +1,41 @@
+% =============================================================================
+% INF-221 Algoritmos y Complejidad -- Tarea 1 -- Semestre 2026-2
+% Autor: Kurt Wiederhold   Rol: 202473528-4
+% Seccion: Entorno experimental (extension maxima: 1/2 pagina)
+%
+% Los dos archivos que siguen definen, como macros \newcommand, TODOS los
+% numeros que la prosa del informe cita (razones, factores, tiempos puntuales).
+% Los generan los scripts plot_generator.py a partir de los CSV de mediciones,
+% igual que las tablas y las figuras, de modo que el texto no contiene ningun
+% valor escrito a mano y no queda desincronizado si se repite el experimento.
+% Se cargan aqui porque esta es la primera seccion que los usa.
+% =============================================================================
+\input{../code/sorting/data/measurements/numbers_sorting.tex}
+\input{../code/matrix_multiplication/data/measurements/numbers_matrix.tex}
+
+\textbf{Plataforma.} AMD Ryzen 7 7700 (8 núcleos Zen~4, 3{,}8~GHz), 32~GiB
+DDR5, cachés de 32~KiB (L1d, 8 vías), 1~MiB (L2) por núcleo y 32~MiB (L3);
+Windows~11 Pro 24H2; \texttt{g++}~16.1.0 (MinGW-w64), opciones
+\texttt{-std=c++17} y \texttt{-O2}, sin \texttt{-march=native} para no atar el
+binario a este procesador~\cite{hales2017replicability}; Python~3.12.10,
+NumPy~2.5.2 y Matplotlib~3.11.1.
+
+\textbf{Datos.} Exactamente los del anexo~A: $72$ arreglos y $72$ pares de
+matrices ($4$ tamaños $\times$ $3$ tipos $\times$ $2$ dominios $\times$ $3$
+muestras), producidos sin modificación por los generadores entregados
+(\texttt{array\_generator.py}, \texttt{matrix\_generator.py}).
+
+\textbf{Metodología.} Se cronometra sólo la llamada al algoritmo, con
+\texttt{steady\_clock}; la E/S y la verificación quedan fuera porque para
+$n=10^{7}$ leer el archivo tarda más que ordenarlo. Cada caso se repite 15, 7 o
+3 veces según su tamaño; se reporta la \emph{mediana}, robusta frente a los
+valores atípicos altos del planificador~\cite{mcgeoch2012}. Cuando una
+ejecución dura menos que la resolución del reloj ($\approx$ 100~ns) se
+cronometra un lote preparado de antemano y se divide el total. La memoria
+auxiliar se mide reemplazando los operadores globales
+\texttt{new}/\texttt{delete} por versiones instrumentadas. Toda salida se
+verifica contra una referencia independiente: las \SortNumRows{} mediciones
+de ordenamiento, las \MatNumRows{} de matrices, las \MatSweepRows{} del
+barrido de umbral y las \MatTypeCheckRows{}+\MatStrideRows{} de los dos
+controles resultaron correctas. Figuras, tablas y toda cifra citada en el
+texto se generan desde los CSV con los scripts \texttt{plot\_generator.py}.

@@ -1,0 +1,19 @@
+% =============================================================================
+% INF-221 Algoritmos y Complejidad -- Tarea 1 -- Semestre 2026-2
+% Autor: Kurt Wiederhold   Rol: 202473528-4
+% Seccion: Introduccion (extension maxima: 1/4 de pagina)
+% =============================================================================
+
+Este trabajo estudia experimentalmente dos problemas clásicos: ordenar un
+arreglo de enteros y multiplicar dos matrices cuadradas. Para el primero se
+comparan \texttt{std::sort}, merge sort, quick sort y patience
+sort~\cite{taocv3,clrs}; para el segundo, el método clásico de tres bucles
+frente al algoritmo de Strassen~\cite{strassen1969}. Sus complejidades teóricas
+son conocidas, de modo que el objetivo no es deducirlas sino contrastarlas con
+el comportamiento observado sobre los casos del anexo~A del enunciado, variando
+el orden inicial de la entrada, la estructura de la matriz y el dominio de los
+valores. La pregunta que guía el análisis es qué esconde la notación
+asintótica: dos algoritmos del mismo orden pueden diferir en un factor
+constante grande, un exponente medido puede no coincidir con el teórico, y un
+algoritmo asintóticamente superior puede perder en el rango de tamaños que
+interesa en la práctica.

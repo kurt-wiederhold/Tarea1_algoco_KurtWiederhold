@@ -1,0 +1,25 @@
+% =============================================================================
+% INF-221 Algoritmos y Complejidad -- Tarea 1 -- Semestre 2026-2
+% Autor: Kurt Wiederhold   Rol: 202473528-4
+%
+% ARCHIVO GENERADO AUTOMATICAMENTE por
+% code/matrix_multiplication/scripts/plot_generator.py a partir de
+% data/measurements/matrix_multiplication_measurements.csv. No editar a mano:
+% se regenera con `make plots`.
+% =============================================================================
+\begin{table}[H]
+\centering
+\small
+\caption{Tiempo mediano [ms], matrices \emph{densas} con dominio $D_{10}$, umbral de corte de Strassen 64; última fila: cociente.}
+\label{tab:matrix-time}
+\begin{tabular}{lrrrr}
+\hline\hline
+Algoritmo & $n=2^{4}$ & $n=2^{6}$ & $n=2^{8}$ & $n=2^{10}$ \\
+\hline
+Clásico (naive) & $1{,}23\times 10^{-3}$ & 0{,}0985 & 16{,}87 & 2630 \\
+Strassen & $1{,}24\times 10^{-3}$ & 0{,}0981 & 6{,}62 & 464 \\
+\hline
+Clásico / Strassen & 1{,}00 & 1{,}00 & 2{,}55 & 5{,}67 \\
+\hline\hline
+\end{tabular}
+\end{table}

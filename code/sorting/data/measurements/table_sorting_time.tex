@@ -1,0 +1,24 @@
+% =============================================================================
+% INF-221 Algoritmos y Complejidad -- Tarea 1 -- Semestre 2026-2
+% Autor: Kurt Wiederhold   Rol: 202473528-4
+%
+% ARCHIVO GENERADO AUTOMATICAMENTE por code/sorting/scripts/plot_generator.py
+% a partir de data/measurements/sorting_measurements.csv. No editar a mano:
+% se regenera con `make plots`.
+% =============================================================================
+\begin{table}[H]
+\centering
+\small
+\caption{Tiempo mediano [ms], entrada \emph{aleatoria} con dominio $D_7$ (mediana sobre las tres muestras y todas las repeticiones).}
+\label{tab:sorting-time}
+\begin{tabular}{lrrrr}
+\hline\hline
+Algoritmo & $n=10^{1}$ & $n=10^{3}$ & $n=10^{5}$ & $n=10^{7}$ \\
+\hline
+std::sort & $3{,}44\times 10^{-5}$ & $5{,}05\times 10^{-3}$ & 3{,}37 & 535 \\
+Merge sort & $8{,}90\times 10^{-5}$ & 0{,}0104 & 5{,}21 & 829 \\
+Quick sort & $6{,}16\times 10^{-5}$ & $8{,}19\times 10^{-3}$ & 4{,}98 & 653 \\
+Patience sort & $1{,}84\times 10^{-4}$ & 0{,}0151 & 6{,}90 & 2469 \\
+\hline\hline
+\end{tabular}
+\end{table}

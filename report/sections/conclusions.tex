@@ -1,0 +1,22 @@
+% =============================================================================
+% INF-221 Algoritmos y Complejidad -- Tarea 1 -- Semestre 2026-2
+% Autor: Kurt Wiederhold   Rol: 202473528-4
+% Seccion: Conclusiones (extension maxima: 1/4 de pagina)
+% (los numeros son macros generadas desde los CSV; vease experiment_intro.tex)
+% =============================================================================
+
+La notación asintótica predijo la forma de todas las curvas y dejó fuera tres
+cosas. Las constantes: los cuatro ordenamientos son $\Theta(n\log n)$ y aun así
+patience sort tarda $\SortRatioPatienceStd$ veces lo que \texttt{std::sort}
+para $n=10^{7}$. El costo uniforme por operación: el de \texttt{std::sort} se
+multiplica por $\SortStdNsFactor$ al dejar de caber en L1, y el clásico de
+matrices exhibe $p=\MatExpNaive$ en vez de $3$ no por falta de caché sino por
+el alineamiento del recorrido por columnas en $n=2^{k}$ ($n=1000$ cuesta
+$\MatStrideFactor$ veces menos por operación que $1024$ con igual memoria). Y la
+forma de la entrada: el orden inicial altera hasta $\SortPatWorstBest$ veces el
+tiempo de patience sort, cuyo peor caso medido (aleatorio) no es el teórico
+(ascendente). Strassen resume la lección: su exponente es real
+($\MatSpeedupMax\times$ en $n=2^{10}$), pero sólo si la recursión se detiene a
+tiempo —hasta bloques $1\times1$ es $\MatSweepPureOverNaive$ veces más lento
+que el $\Theta(n^{3})$— y frente a un clásico sin la penalización de las
+potencias de dos su ventaja sería de $\MatStrideEquivSpeedup\times$.

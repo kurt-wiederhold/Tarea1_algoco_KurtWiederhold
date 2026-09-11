@@ -1,0 +1,22 @@
+# Arreglos de ordenamiento con n = 10^7 (36 archivos, ~1,7 GB): no se versionan.
+# Se regeneran con `make data && make run` en code/sorting (ver code/README.md).
+code/sorting/data/array_input/10000000_*.txt
+code/sorting/data/array_output/10000000_*_out.txt
+
+# Residuos de compilacion y pruebas
+*.exe
+*.o
+__pycache__/
+*.pyc
+
+# Auxiliares de LaTeX (report.pdf y report.bbl si se versionan)
+report/*.aux
+report/*.log
+report/*.out
+report/*.bcf
+report/*.run.xml
+report/*.blg
+report/*.toc
+report/*.fls
+report/*.fdb_latexmk
+report/*.synctex.gz
