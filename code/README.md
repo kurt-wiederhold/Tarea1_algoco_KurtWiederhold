@@ -55,6 +55,13 @@ Instalación de las dependencias de Python:
 python -m pip install numpy matplotlib
 ```
 
+> El código compila correctamente con `-std=c++17 -O2 -Wall -Wextra` (sin
+> advertencias con g++ 16.1.0). Dependiendo de la versión de GCC, pueden
+> aparecer advertencias `-Warray-bounds` relacionadas con la optimización
+> interna de `std::vector` (falso positivo conocido de GCC 12–13 al copiar el
+> vector de retorno), sin impedir la compilación ni afectar las pruebas de
+> corrección.
+>
 > En Windows el enlazado es estático (`-static -static-libgcc -static-libstdc++`)
 > para que los ejecutables no dependan de las DLL de MinGW, y se enlaza
 > `-lpsapi` porque la medición de memoria residente usa `GetProcessMemoryInfo`.

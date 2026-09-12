@@ -22,7 +22,9 @@
 #               proposito: -march=native ata los resultados al procesador
 #               exacto de esta maquina y haria irreproducible el experimento en
 #               otro equipo, que es justo lo contrario de lo que se busca.
-#   -Wall -Wextra  el codigo compila sin advertencias.
+#   -Wall -Wextra  con g++ 16.1.0 no hay advertencias; otras versiones de GCC
+#               pueden emitir -Warray-bounds (falso positivo al copiar el
+#               std::vector de retorno) sin afectar la compilacion.
 #
 #  Este makefile es GNU make estandar. En Windows se probo con mingw32-make de
 #  MinGW-w64 (ver code/README.md).
